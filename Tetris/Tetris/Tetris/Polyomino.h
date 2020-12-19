@@ -1,13 +1,17 @@
 #pragma once
 
 #include <vector>
+#include "Vec2.h"
 #include "Block.h"
 
 class Polyomino
 {
 public:
-	Polyomino();
-
+	Polyomino(const int& StartX, const int& StartY);
+	void PrintBlocksForTest() const;
+	void GetBlocksPositions(Vec2* Positions) const;
 private:
-	std::vector<Block> Blocks[4];
+	int StartX;
+	int StartY;
+	Block Blocks[4];
 };
