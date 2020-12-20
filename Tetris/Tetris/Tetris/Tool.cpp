@@ -1,3 +1,4 @@
+#include <iostream>
 #include <random>
 #include "Tool.h"
 
@@ -14,4 +15,20 @@ int Tool::GenerateRandomNumber()
 
 	// 균등 분포 개체에 사용할 난수 엔진을 전달하여 균등 분포에서 무작위로 샘플을 뽑음.
 	return Distribution( Generator );
+}
+
+void Tool::PrintOffsetX( const int& OffsetX )
+{
+	for( int x = 0; x < OffsetX; ++x )
+	{
+		std::cout << " ";
+	}
+}
+
+void Tool::PrintOffsetY( const int& OffsetY )
+{
+	for( int y = 0; y < OffsetY; ++y )
+	{
+		std::cout << std::endl;
+	}
 }

@@ -63,6 +63,11 @@ Polyomino::Polyomino( const int& StartX, const int& StartY )
 	default:
 		break;
 	}
+
+	for( int i = 0; i < 4; ++i )
+	{
+		Positions[i] = Blocks[i].GetPosition();
+	}
 }
 
 void Polyomino::PrintBlocksForTest() const
@@ -74,13 +79,19 @@ void Polyomino::PrintBlocksForTest() const
 	}
 }
 
-void Polyomino::GetBlocksPositions(Vec2* Positions) const
+void Polyomino::GetBlocksPositions(Vec2* pArr) const
 {
-	// 매개변수로 배열을 받지 않고 이 함수 내에서 배열을 생성 후 리턴 할 경우에
-	// 함수의 스택과 함수를 호출한 곳의 스택이 다르므로, 리턴을 받을 때 배열이 사라짐.
 	for( int i = 0; i < 4; ++i )
 	{
-		Positions[i] = Blocks[i].GetPosition();
+		pArr[i] = Positions[i];
+	}
+}
+
+void Polyomino::DownMino()
+{
+	for( int i = 0; i < 4; ++i )
+	{
+		--Positions[i].y;
 	}
 }
 
