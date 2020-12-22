@@ -12,4 +12,4 @@
 
 #### [Flood-Fill Algorithm](https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/) : 포위 바둑알 제거에 사용한 알고리즘.
 
-#### [Implementing Example](https://www.moderndescartes.com/essays/implementing_go/) : 구현 간단 예시.
+#### [Implementing Example](https://www.moderndescartes.com/essays/implementing_go/) : 파이썬으로 구현한 코드 예.
