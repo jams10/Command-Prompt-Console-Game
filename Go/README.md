@@ -4,7 +4,7 @@
 
 #### 명령어 콘솔창을 이용한 간단한 바둑 게임 프로젝트.
 
-#### Tromp-Taylor 규칙을 적용해 제작하였습니다.
+#### Tromp-Taylor 규칙을 이용하여 제작.
 
 ## :ballot_box_with_check: 참고
 
