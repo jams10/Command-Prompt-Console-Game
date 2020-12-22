@@ -8,8 +8,8 @@
 
 ## :ballot_box_with_check: 참고
 
-#### [Tromp-Taylor Rules](http://webdocs.cs.ualberta.ca/~hayward/396/hoven/tromptaylor.pdf) : 기본 바둑 규칙
+#### [Tromp-Taylor Rules](http://webdocs.cs.ualberta.ca/~hayward/396/hoven/tromptaylor.pdf) : 바둑 규칙(점수 계산, Ko-Rule 등).
 
-#### [Flood-Fill Algorithm](https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/) : 포위 바둑알 제거
+#### [Flood-Fill Algorithm](https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/) : 포위 바둑알 제거에 사용한 알고리즘.
 
-#### [Implementing Example](https://www.moderndescartes.com/essays/implementing_go/) : 구현 간단 예시
+#### [Implementing Example](https://www.moderndescartes.com/essays/implementing_go/) : 구현 간단 예시.
