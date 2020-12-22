@@ -1,7 +1,12 @@
 #pragma once
 
-#include <string>
 #include "Vec2.h"
+
+enum class BLOCKTYPE
+{
+	FALLING,
+	STACKED
+};
 
 class Block
 {
@@ -11,7 +16,8 @@ public:
 	Block( const Vec2& Pos );
 	void SetPosition( const int& X, const int& Y );
 	Vec2 GetPosition() const;
+	void SetBlockType(const BLOCKTYPE& Type );
 private:
 	Vec2 Pos;
-	std::string Shape = "бс";
+	BLOCKTYPE Type;
 };
