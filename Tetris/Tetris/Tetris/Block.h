@@ -2,22 +2,28 @@
 
 #include "Vec2.h"
 
-enum class BLOCKTYPE
+enum class BLOCKSHAPE
 {
-	FALLING,
-	STACKED
+	EMPTY_SQ,
+	FULLFILLED_SQ,
+	DOUBLE_SQ
+};
+
+enum class COLOR
+{
+	RED,
+	GREEN,
+	BLUE
 };
 
 class Block
 {
 public:
-	Block() = default;
-	Block( const int& X, const int& Y );
-	Block( const Vec2& Pos );
-	void SetPosition( const int& X, const int& Y );
-	Vec2 GetPosition() const;
-	void SetBlockType(const BLOCKTYPE& Type );
+	Block( const Vec2& pos, const BLOCKSHAPE& shape, const COLOR& color );
+	void SetBlockShape( const BLOCKSHAPE& shape );
+	void SetBlockColor( const COLOR& color );
 private:
-	Vec2 Pos;
-	BLOCKTYPE Type;
+	Vec2 pos;
+	BLOCKSHAPE shape;
+	COLOR color;
 };

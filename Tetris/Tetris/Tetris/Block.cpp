@@ -1,31 +1,18 @@
 #include "Block.h"
 
-Block::Block( const int& X, const int& Y )
+Block::Block( const Vec2& pos_in, const BLOCKSHAPE& shape_in, const COLOR& color_in )
 	:
-	Pos( Vec2(X,Y) ),
-	Type( BLOCKTYPE::FALLING )
+	pos(pos_in),
+	shape(shape_in),
+	color(color_in)
 {
 }
 
-Block::Block( const Vec2& Pos )
-	:
-	Pos(Pos),
-	Type( BLOCKTYPE::FALLING )
+void Block::SetBlockShape( const BLOCKSHAPE& shape )
 {
+	this->shape = shape;
 }
 
-void Block::SetPosition( const int& X, const int& Y )
+void Block::SetBlockColor( const COLOR& color )
 {
-	Pos.x = X;
-	Pos.y = Y;
-}
-
-Vec2 Block::GetPosition() const
-{
-	return Pos;
-}
-
-void Block::SetBlockType( const BLOCKTYPE& Type )
-{
-	this->Type = Type;
 }
