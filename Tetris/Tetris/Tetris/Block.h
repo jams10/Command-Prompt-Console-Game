@@ -4,11 +4,11 @@
 
 enum class BLOCKSHAPE
 {
-	EMPTY,
-	EMPTY_SQ,
-	FULLFILLED_SQ,
-	DOUBLE_SQ,
-	GRILLED_SQ
+	EMPTY,			// "  "
+	EMPTY_SQ,		// "бр"
+	FULLFILLED_SQ,  // "бс"
+	DOUBLE_SQ,      // "в├"
+	GRILLED_SQ      // "в╠"
 };
 
 enum class COLOR
