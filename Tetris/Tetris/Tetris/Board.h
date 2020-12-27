@@ -12,6 +12,6 @@ public:
 private:
 	int Width;
 	int Height;
-	// 2Â÷¿ø Block vector
+	// 2ì°¨ì› Block vector
 	std::vector<std::vector<Block>> Blocks;
 };

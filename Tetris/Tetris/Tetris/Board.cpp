@@ -8,7 +8,7 @@ Board::Board( const int& width_in, const int& height_in )
 	Width(width_in),
 	Height(height_in)
 {
-	// BLOCKSHAPE : EMPTY, COLOR : WHITE¸¦ ÀÎÀÚ·Î ÇÏ´Â Block °³Ã¼·Î height * width ¸¸Å­ º¤ÅÍ¸¦ Ã¤¿ò.
+	// BLOCKSHAPE : EMPTY, COLOR : WHITEë¥¼ ì¸ìë¡œ í•˜ëŠ” Block ê°œì²´ë¡œ height * width ë§Œí¼ ë²¡í„°ë¥¼ ì±„ì›€.
 	Blocks.resize( Height, std::vector<Block>( Width, Block( BLOCKSHAPE::EMPTY, COLOR::WHITE ) ) );
 }
 

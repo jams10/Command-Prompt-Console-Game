@@ -5,10 +5,10 @@
 enum class BLOCKSHAPE
 {
 	EMPTY,			// "  "
-	EMPTY_SQ,		// "¡à"
-	FULLFILLED_SQ,  // "¡á"
-	DOUBLE_SQ,      // "¢Ã"
-	GRILLED_SQ      // "¢Ì"
+	EMPTY_SQ,		// "â–¡"
+	FULLFILLED_SQ,  // "â– "
+	DOUBLE_SQ,      // "â–£"
+	GRILLED_SQ      // "â–©"
 };
 
 enum class COLOR
