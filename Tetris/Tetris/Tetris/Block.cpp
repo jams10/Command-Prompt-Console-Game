@@ -25,6 +25,11 @@ void Block::SetBlockColor( const COLOR& color )
 	this->Color = color;
 }
 
+void Block::SetBlockPosition( const Vec2& pos )
+{
+	this->Pos = pos;
+}
+
 BLOCKSHAPE Block::GetBlockShape() const
 {
 	return Shape;
@@ -33,4 +38,9 @@ BLOCKSHAPE Block::GetBlockShape() const
 COLOR Block::GetBlockColor() const
 {
 	return Color;
+}
+
+Vec2 Block::GetBlockPosition() const
+{
+	return Pos;
 }

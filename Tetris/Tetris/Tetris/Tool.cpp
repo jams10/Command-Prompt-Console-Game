@@ -31,14 +31,14 @@ void Tool::PrintByColor( const BLOCKSHAPE& shape, const COLOR& color )
 		SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ), FOREGROUND_BLUE );
 		break;
 	default:
-		// 각 case에서 해당하는 색상으로 콘솔 텍스트 출력 색상을 변경해주고, 모양을 출력함.
-		// 그 후, 다시 출력 색상을 기본 색상인 흰색으로 바꾸어줌.
-		PrintShape( shape );
-		SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ),
-			FOREGROUND_RED | FOREGROUND_BLUE |
-			FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 		break;
 	}
+	// 각 case에서 해당하는 색상으로 콘솔 텍스트 출력 색상을 변경해주고, 모양을 출력함.
+	// 그 후, 다시 출력 색상을 기본 색상인 흰색으로 바꾸어줌.
+	PrintShape( shape );
+	SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ),
+			FOREGROUND_RED | FOREGROUND_BLUE |
+			FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 }
 
 void Tool::PrintShape( const BLOCKSHAPE& shape )
