@@ -5,3 +5,5 @@
 ChiliTomatoNoodle의 Intermediate C++ Programming Tutorial Chapter 9 
 
 #### [ChiliTomatoNoodle 영상](https://www.youtube.com/watch?v=F9oqC1nscgE&list=PLqCJpWy5Fohfil0gvjzgdV4h29R9kDKtZ&index=19)
+
+#### [5글자 단어 텍스트 파일](https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt)
