@@ -18,6 +18,24 @@ bool contains_word( const std::vector<std::string>& vec, const std::string& word
     }
     return false;
 }
+
+// 두 벡터에 들어 있는 단어 중 공통 단어들을 담은 벡터를 리턴하는 함수.
+std::vector<std::string> get_intersection( const std::vector<std::string>& vec1, 
+                                           const std::vector<std::string>& vec2 )
+{
+    std::vector<std::string> intersection;
+
+    for( const auto& s: vec1 )
+    {
+        if( contains_word( vec2, s ) )
+        {
+            intersection.push_back( s );
+        }
+    }
+
+    return intersection;
+}
+
 // 단어의 알파벳 문자 개수 체크.
 std::vector<int> fill_buckets( const std::string& word )
 {
@@ -54,6 +72,7 @@ int calc_score( const std::string& word1, const std::string& word2 )
 
 int main()
 {
+    // 1. 5글자 단어 벡터
     std::vector<std::string> five_letter_words;
 
     // 스코프를 하나 더 넣어서 벡터에 단어들을 넣은 뒤에, 파일이 닫히도록 함.
@@ -71,9 +90,32 @@ int main()
         }
     }
 
+    // 10k개 자주 사용하는 단어 벡터
+    std::vector<std::string> freq_words;
+
+    // 스코프를 하나 더 넣어서 벡터에 단어들을 넣은 뒤에, 파일이 닫히도록 함.
+    {
+        std::ifstream freq_words_file("10k.txt");
+    
+        // 파일에 있는 단어들을 벡터에 저장.
+        for( std::string line; std::getline( freq_words_file, line); )
+        {
+            if( line.empty() )
+            {
+                continue;
+            }
+            freq_words.push_back( line );
+        }
+    }
+    // freq_words의 사이즈를 조절하여 가장 많이 사용하는 단어 2000 개로 범위를 제한.
+    // size를 설정함으로써 게임 난이도 설정 가능.
+    freq_words.resize( 100 );
+
+    auto filtered_words = get_intersection( five_letter_words, freq_words );
+
     // 난수 생성
     std::mt19937 rng( std::random_device{}() );
-    std::uniform_int_distribution<int> dist( 0, five_letter_words.size() - 1 );
+    std::uniform_int_distribution<int> dist( 0, filtered_words.size() - 1 );
 
     // 생성된 난수에 따라 한 단어 무작위 선택
     const std::string target = five_letter_words[dist( rng )];
