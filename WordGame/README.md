@@ -4,7 +4,7 @@
 
 자주 사용하는 영단어들 중에 5글자로 이루어진 단어들에 대해 맞추는 게임.
 
-ChiliTomatoNoodle의 Intermediate C++ Programming Tutorial Chapter 9 
+ChiliTomatoNoodle의 Intermediate C++ Programming Tutorial Chapter 9 실습.
 
 #### [ChiliTomatoNoodle 영상](https://www.youtube.com/watch?v=F9oqC1nscgE&list=PLqCJpWy5Fohfil0gvjzgdV4h29R9kDKtZ&index=19)
 
