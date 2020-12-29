@@ -24,6 +24,8 @@
 
 ### :ballot_box_with_check: 참고
 
-##### [명령어 콘솔 창 컬러 텍스트 출력](https://tikcode.tistory.com/2)
+###### [명령어 콘솔 창 컬러 텍스트 출력](https://tikcode.tistory.com/2)
 
-##### [VS Code & MinGW-w64 난수 생성](http://www.cpp.re/forum/beginner/250575/)
+###### [VS Code & MinGW-w64 난수 생성](http://www.cpp.re/forum/beginner/250575/)
+
+###### [테트리스 블록 회전 방법](https://www.youtube.com/watch?app=desktop&v=Atlr5vvdchY)
