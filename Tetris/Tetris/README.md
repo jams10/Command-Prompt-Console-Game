@@ -22,7 +22,7 @@
 
 #### 2. 블록이 내려오는 게임 화면과 점수 및 기타 정보 출력 부분을 텍스트 아이콘 등으로 구분해주기.
 
-### :ballot_box_with_check: 참고
+## :ballot_box_with_check: 참고
 
 ###### [명령어 콘솔 창 컬러 텍스트 출력](https://tikcode.tistory.com/2)
 
