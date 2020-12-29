@@ -4,18 +4,26 @@ int main()
 {
 	Game GameInstance;
 	//GameInstance.Run();
-	Board BoardInstance(10,20);
 
-	GameInstance.GenerateBlocks( Vec2( BoardInstance.GetWidth() / 2 - 1, 0 ), 
-	                             GameInstance.CurrentBlocks );
+	
+	GameInstance.GenerateBlocks( Vec2(4, 0) );
 
-	BoardInstance.Print(GameInstance.CurrentBlocks);
+	GameInstance.ComposeFrame();
 
-	GameInstance.GenerateBlocks( Vec2( BoardInstance.GetWidth() / 2 - 1, 0 ), 
-	                             GameInstance.CurrentBlocks );
+	GameInstance.RotateBlocks();
 
-	BoardInstance.Print(GameInstance.CurrentBlocks);
+	GameInstance.ComposeFrame();
 
+	/*
+	for(int i = 0; i < 4; ++i)
+	{
+		GameInstance.RotateBlocks();
+
+		GameInstance.ComposeFrame();
+
+		GameInstance.GoDownBlocks();
+	}
+	*/
 	return 0;
 }
 

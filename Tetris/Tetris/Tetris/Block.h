@@ -16,6 +16,8 @@ enum class COLOR
 	RED,
 	GREEN,
 	BLUE,
+	YELLOW,
+	PURPLE,
 	WHITE
 };
 

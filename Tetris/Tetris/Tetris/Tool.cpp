@@ -30,6 +30,12 @@ void Tool::PrintByColor( const BLOCKSHAPE& shape, const COLOR& color )
 	case COLOR::BLUE:
 		SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ), FOREGROUND_BLUE );
 		break;
+	case COLOR::YELLOW:
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY);
+		break;
+	case COLOR::PURPLE:
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_BLUE);
+		break;
 	default:
 		break;
 	}

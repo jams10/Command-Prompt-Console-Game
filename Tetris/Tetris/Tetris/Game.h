@@ -6,8 +6,6 @@
 	참고 : http://www.cpp.re/forum/beginner/250575/
 	If you are using some port of the GCC compiler for Microsoft OSs, like MingW or MinGW-w64 in W10 or W7, as far as I know std::random_device is not guaranteed to work.
     You can initialize std::mt19937 by std::chrono::high_resolution_clock.
-
-	
 */
 
 #include <random>
@@ -21,7 +19,12 @@ public:
 	void Run();
 	void Update();
 	void ComposeFrame();
-	void GenerateBlocks( const Vec2& pos, std::vector<Block>& currentblocks );
+	void GenerateBlocks( const Vec2& pos );
+	void GoDownBlocks();
+	void GoLeftBlocks();
+	void GoRightBlocks();
+	void RotateBlocks();
+	bool FloorTest() const;
 private:
 	/*
 		블록 생성시 색상을 랜덤으로 지정해주기 위해 랜덤 숫자를 생성.
@@ -29,6 +32,7 @@ private:
 	*/
 	std::mt19937 RandomGenerator;
 	Board BoardInstance;
-public:
 	std::vector<Block> CurrentBlocks;
+	// 이미 블록이 생성되어 내려오고 있는지 체크
+	bool isFalling = false;
 };

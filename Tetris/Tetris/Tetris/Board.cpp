@@ -26,14 +26,13 @@ void Board::Print( const std::vector<Block> currentblocks ) const
 		for( int x = 0; x < Width; ++x )
 		{
 			bool checkflag = false;
-			for( int i = 0; i < 4; ++i)
+			for( const Block& block : currentblocks )
 			{
-				Vec2 pos = currentblocks[i].GetBlockPosition();
+				Vec2 pos = block.GetBlockPosition();
 				if( pos.x == x && pos.y == y)
 				{
-					//std::cout << "pos index : " << i << " x : " << x << " y : " << y << std::endl;
 					checkflag = true;
-					Tool::PrintByColor( currentblocks[i].GetBlockShape(), currentblocks[i].GetBlockColor() );
+					Tool::PrintByColor( block.GetBlockShape(), block.GetBlockColor() );
 				}
 			}
 			if( !checkflag )
