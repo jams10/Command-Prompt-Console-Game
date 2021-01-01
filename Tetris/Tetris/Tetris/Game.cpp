@@ -34,11 +34,29 @@ void Game::Update()
 		isFalling = true;
 	}
 
-	input = _getch();
-
-	if( input == 'r' )
+	// 키보드가 입력 되었을 때만 사용자로 부터 입력을 받아 옴.
+	if(kbhit())
 	{
+		input = _getch();
+		std::tolower(input);
+	}
+
+	switch(input)
+	{
+	case 'r':
 		RotateBlocks();
+		break;
+	case 'a':
+		GoLeftBlocks();
+		break;
+	case 'd':
+		GoRightBlocks();
+		break;
+	case 's':
+		GoDownBlocks();
+		break;
+	default:
+		break;
 	}
 
 	GoDownBlocks();
@@ -162,10 +180,10 @@ void Game::RotateBlocks()
 	for( Block& block : CurrentBlocks )
 	{
 		Vec2 pos = block.GetBlockPosition();
-		std::cout << "Before / pos.x : " << pos.x << " pos.y : " << pos.y << std::endl;
+		//std::cout << "Before / pos.x : " << pos.x << " pos.y : " << pos.y << std::endl;
 		block.SetBlockPosition( Vec2( pos.y, pos.x ) );
 		pos = block.GetBlockPosition();
-		std::cout << "After / pos.x : " << pos.x << " pos.y : " << pos.y << std::endl;
+		//std::cout << "After / pos.x : " << pos.x << " pos.y : " << pos.y << std::endl;
 	}
 }
 

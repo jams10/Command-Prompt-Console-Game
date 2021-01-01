@@ -8,8 +8,7 @@ Board::Board( const int& width_in, const int& height_in )
 	Width(width_in),
 	Height(height_in)
 {
-	// BLOCKSHAPE : EMPTY, COLOR : WHITE를 인자로 하는 Block 개체로 height * width 만큼 벡터를 채움.
-	Blocks.resize( Height, std::vector<Block>( Width, Block( BLOCKSHAPE::EMPTY, COLOR::WHITE ) ) );
+	Blocks.resize( Width * Height, Block(BLOCKSHAPE::EMPTY, COLOR::WHITE) );
 }
 
 void Board::Print( const std::vector<Block> currentblocks ) const
@@ -18,7 +17,7 @@ void Board::Print( const std::vector<Block> currentblocks ) const
 	
 	for( int y = 0; y < Height; ++y )
 	{
-		Tool::PrintOffSetX( 5 );
+		Tool::PrintOffSetX( 7 );
 		// 왼쪽 바깥 프레임 출력
 		Tool::PrintByColor( BLOCKSHAPE::GRILLED_SQ, COLOR::WHITE );
 		
@@ -37,7 +36,7 @@ void Board::Print( const std::vector<Block> currentblocks ) const
 			}
 			if( !checkflag )
 			{
-				Tool::PrintByColor( Blocks[y][x].GetBlockShape(), Blocks[y][x].GetBlockColor() );
+				Tool::PrintByColor( Blocks[y * Width + x].GetBlockShape(), Blocks[y * Width + x].GetBlockColor() );
 			}
 		}
 		
@@ -46,7 +45,7 @@ void Board::Print( const std::vector<Block> currentblocks ) const
 		std::cout << std::endl;
 	}
 	
-	Tool::PrintOffSetX( 5 );
+	Tool::PrintOffSetX( 7 );
 	
 	// 아래쪽 바깥 프레임 출력
 	for( int x = 0; x < Width + 2; ++x )

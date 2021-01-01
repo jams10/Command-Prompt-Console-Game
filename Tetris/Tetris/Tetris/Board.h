@@ -14,6 +14,6 @@ public:
 private:
 	int Width;
 	int Height;
-	// 2차원 Block vector
-	std::vector<std::vector<Block>> Blocks;
+	// 2D -> 1D Vector
+	std::vector<Block> Blocks;
 };

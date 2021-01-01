@@ -5,7 +5,9 @@ int main()
 	Game GameInstance;
 	//GameInstance.Run();
 
-	
+	GameInstance.Run();
+
+	/*
 	GameInstance.GenerateBlocks( Vec2(4, 0) );
 
 	GameInstance.ComposeFrame();
@@ -13,7 +15,7 @@ int main()
 	GameInstance.RotateBlocks();
 
 	GameInstance.ComposeFrame();
-
+	*/
 	/*
 	for(int i = 0; i < 4; ++i)
 	{
