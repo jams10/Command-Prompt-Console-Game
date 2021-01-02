@@ -24,6 +24,7 @@ public:
 	void GoLeftBlocks();
 	void GoRightBlocks();
 	void RotateBlocks();
+	void StackBlocks();
 	bool FloorTest() const;
 private:
 	/*

@@ -63,6 +63,7 @@ void Game::Update()
 
 	if( FloorTest() )
 	{
+		StackBlocks();
 		isFalling = false;
 	}
 
@@ -184,6 +185,16 @@ void Game::RotateBlocks()
 		block.SetBlockPosition( Vec2( pos.y, pos.x ) );
 		pos = block.GetBlockPosition();
 		//std::cout << "After / pos.x : " << pos.x << " pos.y : " << pos.y << std::endl;
+	}
+}
+
+void Game::StackBlocks()
+{
+	for( Block& block : CurrentBlocks )
+	{
+		block.SetBlockShape(BLOCKSHAPE::FULLFILLED_SQ);
+		BoardInstance.AddBlock( block );
+		block.SetBlockShape(BLOCKSHAPE::DOUBLE_SQ);
 	}
 }
 

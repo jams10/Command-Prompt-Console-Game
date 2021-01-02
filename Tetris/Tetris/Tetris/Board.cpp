@@ -54,6 +54,12 @@ void Board::Print( const std::vector<Block> currentblocks ) const
 	}
 }
 
+void Board::AddBlock( const Block& block )
+{
+	Vec2 blockPos = block.GetBlockPosition();
+	Blocks[blockPos.y * Width + blockPos.x] = block;
+}
+
 int Board::GetWidth() const
 {
 	return Width;

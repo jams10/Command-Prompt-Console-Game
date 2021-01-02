@@ -9,6 +9,7 @@ class Board
 public:
 	Board( const int& width, const int& height );
 	void Print( const std::vector<Block> currentblocks ) const;
+	void AddBlock( const Block& block );
 	int GetWidth() const;
 	int GetHeight() const;
 private:
